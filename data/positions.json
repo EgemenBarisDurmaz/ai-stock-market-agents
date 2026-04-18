@@ -1,0 +1,18 @@
+{
+  "positions": [
+    {
+      "ticker": "AAPL",
+      "entry_price": 263.50,
+      "quantity": 10,
+      "entry_date": "2026-04-15",
+      "direction": "long"
+    },
+    {
+      "ticker": "NVDA",
+      "entry_price": 195.00,
+      "quantity": 5,
+      "entry_date": "2026-04-14",
+      "direction": "long"
+    }
+  ]
+}
