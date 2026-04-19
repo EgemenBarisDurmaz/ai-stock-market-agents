@@ -10,4 +10,3 @@ services:
       - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
     volumes:
       - ./data:/app/data
-      - ./signals.db:/app/signals.db
