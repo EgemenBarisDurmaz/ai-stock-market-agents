@@ -40,6 +40,10 @@ Orchestrator
 - Weekdays: 9:00 AM and 3:40 PM (GMT+2)
 - Weekends: 9:00 AM (GMT+2)
 
+## Live Dashboard
+
+Access the live dashboard at: http://3.122.127.27:8000
+
 ## Alert format
 
 ```
