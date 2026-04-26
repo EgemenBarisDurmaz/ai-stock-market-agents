@@ -17,7 +17,7 @@ def recent_news_tool(ticker: str) -> list:
 
 
 def create_research_agent():
-    llm = ChatAnthropic(model="claude-3-haiku-20240307")
+    llm = ChatAnthropic(model="claude-haiku-4-5-20251001")
     tools = [stock_price_tool, recent_news_tool]
 
     agent = create_react_agent(

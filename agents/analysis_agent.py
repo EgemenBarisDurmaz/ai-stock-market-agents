@@ -17,7 +17,7 @@ def positions_tool() -> list:
 
 
 def create_analysis_agent():
-    llm = ChatAnthropic(model="claude-3-haiku-20240307")
+    llm = ChatAnthropic(model="claude-haiku-4-5-20251001")
     tools = [ema_tool, positions_tool]
 
     agent = create_react_agent(

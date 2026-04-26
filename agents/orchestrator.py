@@ -29,7 +29,7 @@ def run_orchestrator(ticker: str) -> str:
     })
     analysis_summary = analysis_result["messages"][-1].content
 
-    llm = ChatAnthropic(model="claude-3-haiku-20240307")
+    llm = ChatAnthropic(model="claude-haiku-4-5-20251001")
     final_report = llm.invoke([
         HumanMessage(content=f"""
     Based on the following research and analysis for {ticker}, 
