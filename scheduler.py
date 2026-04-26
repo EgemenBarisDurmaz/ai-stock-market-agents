@@ -19,7 +19,7 @@ def parse_report(report: str) -> dict:
         "ema_status": ""
     }
     try:
-        price_match = re.search(r'PRICE:\s*\$?([\d,]+\.?\d*)', report)
+        price_match = re.search(r'PRICE:\s*[$€£]?([\d,]+\.?\d*)', report)
         if price_match:
             result["price"] = float(price_match.group(1).replace(",", ""))
 
