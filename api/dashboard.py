@@ -5,6 +5,20 @@ import datetime
 import json
 from config import POSITIONS_FILE
 
+CURRENCY_MAP = {
+    ".PA": "€",   # Paris
+    ".DE": "€",   # Frankfurt
+    ".L":  "£",   # London
+    ".SW": "CHF", # Switzerland
+    ".AS": "€",   # Amsterdam
+}
+
+def get_currency(ticker: str) -> str:
+    for suffix, symbol in CURRENCY_MAP.items():
+        if ticker.endswith(suffix):
+            return symbol
+    return "$"
+
 app = FastAPI(title="AI Stock Market Agents")
 
 
@@ -19,6 +33,7 @@ def dashboard():
 
     rows = ""
     for s in signals:
+        currency = get_currency(s.ticker)
         if s.signal == "BUY":
             signal_class = "buy"
             signal_icon = "▲"
@@ -36,7 +51,7 @@ def dashboard():
                     <span class="ticker-name">{s.ticker}</span>
                 </div>
             </td>
-            <td class="price-cell">${s.current_price:,.2f}</td>
+            <td class="price-cell">{currency}{s.current_price:,.2f}</td>
             <td>
                 <span class="signal-badge {signal_class}">
                     {signal_icon} {s.signal}
