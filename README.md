@@ -42,7 +42,7 @@ Orchestrator
 
 ## Live Dashboard
 
-Access the live dashboard at: http://3.122.127.27:8000
+Access the live dashboard at: http://18.196.153.208:8000/
 
 ## Alert format
 
